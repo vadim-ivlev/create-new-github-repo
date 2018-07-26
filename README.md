@@ -28,6 +28,9 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com".
 ```
 Copy and paste the content of id_rsa.pub into your **Github profile -> Settings -> SSH and GPG Keys -> Add new SSH key**
 
+More information is here: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+
 
 To add an existing local repository to GitHub, push it from the command line
 ```
