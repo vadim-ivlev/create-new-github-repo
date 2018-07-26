@@ -16,8 +16,20 @@ git commit -m "."
 git remote add origin git@github.com:vadim-ivlev/create-new-github-repo.git
 git push -u origin master
 ```
+if the last command gives the error: 
+```
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+```
+then you need to add your public RSA key to the GitHub. The key is located in ~/.ssh/id_rsa.pub file. 
+If you don't have one generate it with the following command:
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com".
+```
+Copy and paste the content of id_rsa.pub into your **Github profile -> Settings -> SSH and GPG Keys -> Add new SSH key**
 
-If you have an existing local repository, you can push it to GitHub from the command line
+
+To add an existing local repository to GitHub, push it from the command line
 ```
 git remote add origin git@github.com:USER/REPO.git
 git push -u origin master
